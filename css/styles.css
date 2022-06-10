@@ -12,6 +12,15 @@
   padding: 10px;
 }
 
+#content {
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 10px;
+  font-family: 'Happy Monkey', cursive;
+}
+
 .footer {
   background-color: #99c0d4;
   text-align: center;

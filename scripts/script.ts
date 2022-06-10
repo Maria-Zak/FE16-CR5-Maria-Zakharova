@@ -17,18 +17,21 @@ class Animal{
    
     display(){
         let color: string = "";
+        let sign: string="";
         if (this.vaccine == true) {
             color = "success";
+            sign = "<i class='fa fa-check-circle'></i>"
         } else {
-            color = "danger";}
-        return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card" style="width: 18rem;">
+            color = "danger";
+            sign = "<i class= 'fa fa-close'></i>"}
+        return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card">
         <img src="${this.image}" class="card-img-top d-none d-md-block" alt="...">
         <div class="card-body">
-          <h5 class="card-title">${this.name}</h5>
+        <h5 class="card-title bg-black text-white text-center">${this.name}</h5>
           <p class="card-text">Gender: ${this.gender}</p>
           <p class="card-text">Age: ${this.age} years</p>
           <p class="card-text">Size: ${this.size}</p>
-          <a href="#" class="btn btn-${color} vacBtn">Vaccine</a>
+          <button class="btn btn-${color} vacBtn">Vaccine ${sign}</button>
         </div>
       </div>
       </div>`
@@ -48,22 +51,25 @@ class Cat extends Animal{
     }
     display(){
         let color: string = "";
+        let sign: string="";
         if (this.vaccine == true) {
             color = "success";
+            sign = "<i class='fa fa-check-circle'></i>"
         } else {
-            color = "danger";}
-        return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card" style="width: 18rem;">
+            color = "danger";
+            sign = "<i class= 'fa fa-close'></i>"}
+        return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card">
         <img src="${this.image}" class="card-img-top d-none d-md-block" alt="...">
         <div class="card-body">
-          <h5 class="card-title">${this.name}</h5>
+          <h5 class="card-title bg-black text-white text-center">${this.name}</h5>
           <p class="card-text">Gender: ${this.gender}</p>
           <p class="card-text">Age: ${this.age} years</p>
           <p class="card-text">Size: ${this.size}</p>
-          <a href="#" class="btn btn-${color} vacBtn">Vaccine</a>
+          <button class="btn btn-${color} vacBtn">Vaccine ${sign}</button>
           <hr>
           <p class="card-text">Breed: ${this.breed}</p>
           <p class="card-text">Color: ${this.color}</p>
-          <p class="card-text mb-0"><a href="${this.breedURL}"</a>About Breed</p>
+          <p class="card-text mb-0"><a class="text-black text-decoration-none" href="${this.breedURL}"</a>About Breed</p>
         </div>
         </div>
       </div>`
@@ -79,18 +85,21 @@ class Dog extends Animal{
         }
         display(){
             let color: string = "";
+            let sign: string="";
             if (this.vaccine == true) {
                 color = "success";
+                sign = "<i class='fa fa-check-circle'></i>"
             } else {
-                color = "danger";}
-            return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card" style="width: 18rem;">
+                color = "danger";
+                sign = "<i class= 'fa fa-close'></i>"}
+            return `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gap-2"><div class="card">
             <img src="${this.image}" class="card-img-top d-none d-md-block" alt="...">
             <div class="card-body">
-              <h5 class="card-title">${this.name}</h5>
+            <h5 class="card-title bg-black text-white text-center">${this.name}</h5>
               <p class="card-text">Gender: ${this.gender}</p>
               <p class="card-text">Age: ${this.age} years</p>
               <p class="card-text">Size: ${this.size}</p>
-              <a href="#" class="btn btn-${color} vacBtn">Vaccine</a>
+              <button class="btn btn-${color} vacBtn">Vaccine ${sign}</button>
               <hr>
               <p class="card-text">Breed: ${this.breedDog}</p>
               <p class="card-text mb-0">Training: ${this.training}</p>
@@ -103,10 +112,13 @@ class Dog extends Animal{
 let array: Array<Animal>=[]
 new Animal('Sirena','female','small',2, false, 'https://cdn.pixabay.com/photo/2014/09/10/17/44/rat-440987_1280.jpg');
 new Animal('Temp','male','big',10, true, 'https://cdn.pixabay.com/photo/2018/05/11/11/11/horse-3390256_1280.jpg');
-new Cat('Bambi','male','small',4, true, 'https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462_1280.jpg','Siamese',"Seal Point",'https://en.wikipedia.org/wiki/Siamese_cat');
-new Cat('Joy','female','medium',3, true, 'https://cdn.pixabay.com/photo/2022/04/21/15/20/animal-7147727_1280.jpg','Neva Masquerade',"Blue-Tabby-Point",'https://de.wikipedia.org/wiki/Neva_Masquarade');
+new Animal('Dean','male','small',1, false, 'https://cdn.pixabay.com/photo/2014/06/21/08/43/rabbit-373691_1280.jpg');
+new Cat('Bambi','male','small',4, true, 'https://cdn.pixabay.com/photo/2017/03/08/08/52/cat-2126225_1280.jpg','Siamese',"Seal Point",'https://en.wikipedia.org/wiki/Siamese_cat');
+new Cat('Joy','female','medium',3, true, 'https://cdn.pixabay.com/photo/2022/06/03/11/23/cat-7239957_1280.jpg','Neva Masquerade',"Blue-Tabby-Point",'https://de.wikipedia.org/wiki/Neva_Masquarade');
+new Cat('Nemi','female','medium',5, true, 'https://cdn.pixabay.com/photo/2015/03/27/13/10/cat-694718_1280.jpg','Maine Coon',"orange",'https://en.wikipedia.org/wiki/Maine_Coon');
 new Dog('Bueno','male','big',8, true, 'https://cdn.pixabay.com/photo/2019/12/28/00/31/dog-4723680_1280.jpg','Hasky','yes');
 new Dog('Nina','female','medium',12, true, 'https://cdn.pixabay.com/photo/2021/07/05/14/07/dog-6389277_1280.jpg','Corgi','yes');
+new Dog('Spock','male','small',6, true, 'https://cdn.pixabay.com/photo/2022/05/18/14/50/dog-7205472_1280.jpg','Yorkshire terrier','no');
 
 
 const contentDiv=(document.getElementById('content') as HTMLElement)
@@ -117,14 +129,11 @@ for( let val of array){
     }
     const vacBtns = document.getElementsByClassName("vacBtn") as HTMLCollection;
     for(let i: number = 0; i < vacBtns.length; i++){
-        // console.log(vacBtns[i]);
-        vacBtns[i].addEventListener("click", () => setVac(i));
+    vacBtns[i].addEventListener("click", () => vacColor(i));
 }
-
 };
-function setVac(e: any): void{
-    // console.log(e);
-    array[e].vaccine = !array[e].vaccine;
+function vacColor(i:any) {
+    array[i].vaccine = !array[i].vaccine;
     updateHtml();
 }
 
@@ -132,7 +141,7 @@ let sort = document.getElementById("sort") as HTMLElement;
 sort.addEventListener("click", sortAll)
 
 function sortAll() {
-    array.sort((a, b) => b.age - a.age);
+    array.sort((a, b) => a.age - b.age);
     updateHtml()
 }
 updateHtml();
