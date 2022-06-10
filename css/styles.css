@@ -6,6 +6,12 @@
   background-position: center;
 }
 
+.content-heading {
+  font-family: 'Happy Monkey', cursive;
+  text-align: center;
+  padding: 10px;
+}
+
 .footer {
   background-color: #99c0d4;
   text-align: center;
