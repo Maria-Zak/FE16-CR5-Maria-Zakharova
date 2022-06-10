@@ -138,10 +138,13 @@ function vacColor(i:any) {
 }
 
 let sort = document.getElementById("sort") as HTMLElement;
-sort.addEventListener("click", sortAll)
+sort.addEventListener("click", sortAll);
+
+
 
 function sortAll() {
     array.sort((a, b) => a.age - b.age);
     updateHtml()
 }
+
 updateHtml();
