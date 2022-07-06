@@ -28,9 +28,17 @@
 
 .copyright {
   padding: 10px;
+  margin-bottom: 0;
 }
 
 .social {
   background-color: #4b95b9;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .social {
+    gap: 0.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

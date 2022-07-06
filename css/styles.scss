@@ -28,8 +28,16 @@
 
 .copyright {
     padding: 10px;
+    margin-bottom: 0;
 }
 
 .social {
     background-color: rgb(75, 149, 185);
+    gap: 5rem;
+}
+
+@media screen and (max-width:480px) {
+    .social {
+        gap: 0.5rem;
+    }
 }
